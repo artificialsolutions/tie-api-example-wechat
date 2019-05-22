@@ -1,0 +1,19 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/server.js",
+            "env": { 
+                //"WEBHOOK_FOR_TWILIO": "https:/twillioteneoconnector.herokuapp.com",
+                "TENEO_ENGINE_URL": "https://skynet-4fe77f.bots.teneo.ai/longberry_baristas_0x383bjp5a8e6tscbjd9x03tvb/"
+            }
+        }
+    ]
+}
