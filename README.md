@@ -20,7 +20,7 @@ Your bot needs to be published and you need to know the engine URL.
 
 ## Setup instructions
 
-### Connector Setup (Part 1)
+### Connector Setup
 1. Download or clone the connector source code:
     ```
     git clone https://github.com/artificialsolutions/tie-api-example-wechat.git
@@ -31,7 +31,7 @@ Your bot needs to be published and you need to know the engine URL.
     ``` 
 
 
-### WebChat Dashboard setup - Part 1
+### WebChat Dashboard Setup
 1. Login to the WebChat Dashboard by tapping the green login button here:
 https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login
 
@@ -41,7 +41,7 @@ https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login
 
 
 
-### Connector Setup - Part 2
+### Back to Connector Setup
 1. Open a file called ```.env``` that is located in the root folder of this sample project. Now copy the ```AppID``` and ```Token``` from the previous step
 
 3. Start the connector with the following command (replacing the environment variable with the appropriate value):
@@ -58,9 +58,9 @@ Use [ngrok](https://ngrok.com) the connector available via https:
     ```
 2. Running the command above will display a public https URL, copy it, we will use it as a `URL` value for the following steps.
 
-### WebChat Dashboard setup - Part 2
+### Back to WebChat Dashboard Setup
 1. Once the connector is available via https, copy the ``URL``` from the previous step into the URL of Webchat's dashboard online. 
-Also, add a ``/wechat` suffix to the URL field, so that it looks something like:
+Also, add a `/wechat` suffix to the URL field, so that it looks something like:
 ```Http://1234abcd.ngrok.io/wechat```
 
 2. Tap the green Submit button to save all settings.
