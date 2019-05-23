@@ -60,7 +60,7 @@ Use [ngrok](https://ngrok.com) the connector available via https:
 
 ### WebChat Dashboard setup - Part 2
 1. Once the connector is available via https, copy the ``URL``` from the previous step into the URL of Webchat's dashboard online. 
-Also, add a ````/wechat``` suffix to the URL field, so that it looks something like:
+Also, add a ``/wechat` suffix to the URL field, so that it looks something like:
 ```Http://1234abcd.ngrok.io/wechat```
 
 2. Tap the green Submit button to save all settings.
