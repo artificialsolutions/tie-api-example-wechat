@@ -20,7 +20,6 @@ const http = require('http');
 const wechat = require('wechat');
 
 const app = express();
-const router = express.Router();
 const TIE = require('@artificialsolutions/tie-api-client');
 
 const config = {
@@ -33,34 +32,10 @@ const teneoApi = TIE.init(config.teneoURL);
 
 // initialise session handler, to store mapping between WeChat and engine session id
 const sessionHandler = SessionHandler();
-/***
- * SESSION HANDLER
- ***/
-function SessionHandler() {
-
-  // Map the Webchat Sid id to the teneo engine session id. 
-  // This code keeps the map in memory, which is ok for testing purposes
-  // For production usage it is advised to make use of more resilient storage mechanisms like redis
-  const sessionMap = new Map();
-
-  return {
-    getSession: (userId) => {
-      if (sessionMap.size > 0) {
-        return sessionMap.get(userId);
-      }
-      else {
-        return "";
-      }
-    },
-    setSession: (userId, sessionId) => {
-      sessionMap.set(userId, sessionId)
-    }
-  };
-}
-
 
 app.use(express.query());
 app.use('/wechat', wechat(config, async function (req, res, next) {
+  
   // All WeChat related info is in req.weixin
   var message = req.weixin;
   console.log(message);
@@ -153,4 +128,29 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   console.log('Listening on ' + bind);
+}
+
+/***
+ * SESSION HANDLER
+ ***/
+function SessionHandler() {
+
+  // Map the Webchat Sid id to the teneo engine session id. 
+  // This code keeps the map in memory, which is ok for testing purposes
+  // For production usage it is advised to make use of more resilient storage mechanisms like redis
+  const sessionMap = new Map();
+
+  return {
+    getSession: (userId) => {
+      if (sessionMap.size > 0) {
+        return sessionMap.get(userId);
+      }
+      else {
+        return "";
+      }
+    },
+    setSession: (userId, sessionId) => {
+      sessionMap.set(userId, sessionId)
+    }
+  };
 }
