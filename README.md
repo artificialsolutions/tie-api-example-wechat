@@ -29,14 +29,14 @@ Your bot needs to be published and you need to know the engine URL.
 1. Login to the WebChat Dashboard by clicking the green login button on this page:
 [https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login](https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login)
 2. A QR code will appear. In the Wechat app, go to the Discover tab and choose 'Scan'. Scan the QR code with the Wechat app, and a sandbox configuration dashboard will be displayed.
-3. Choose a value for `Token` and copy or remember it, you will need it later.
+3. Choose yor own value to use in the `Token` field and copy or remember it, you will need it later.
 4. Next copy the `appID` that is shown in the first row of the first table at the top of the page.
 
 ### Back to Connector Setup
 1. Create a file called `.env` in the root folder of the project. Give it the following content:
     ```
     APP_ID=<your app id here>
-    TOKEN=<your token here>
+    TOKEN=<your Token here>
     TENEO_ENGINE_URL=<your teneo engine url here>
     ```
     Replace the placeholders with the values you copied earlier.
