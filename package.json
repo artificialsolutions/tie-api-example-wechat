@@ -1,6 +1,6 @@
 {
   "name": "wechat-teneo-connector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A basic example using Teneo and WeChat",
   "main": "server.js",
   "engines": {
