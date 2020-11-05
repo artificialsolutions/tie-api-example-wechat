@@ -3,7 +3,7 @@ This node.js example connector allows you to make your Teneo bot available on We
 
 ## Prerequisites
 ### A Browser with a Translation Extension
-WeChat's website is in mandarin. The instructions below should be able to get you going even if you don't understand Mandarin. If desired however, you may which to use an extension to translate their website.
+WeChat's website is in mandarin. The instructions below should be able to get you going even if you don't understand Mandarin. If desired however, you may wish to use an extension to translate their website.
 
 ### Https
 Making the connector available via https is preferred. We recommend using [ngrok](https://ngrok.com) for this.
@@ -64,4 +64,4 @@ Use [ngrok](https://ngrok.com) the connector available via https:
 ### Start a chat 
 1. Open WeChat, and tap "Scan" from the 'Discover' tab menu.
 2. Scan the QR code that appears halfway down the Webchat Dashboard.
-3. A new chat will appear you are now ready to chat with your Teneo chatbot.
+3. A new chat will appear. You are now ready to chat with your Teneo chatbot.
